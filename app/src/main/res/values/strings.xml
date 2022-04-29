@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MediaPlayer</string>
+    <string name="nav_dash_hls">Dash/Hls</string>
+    <string name="nav_with_ads">With Ads</string>
+    <string name="nav_playlist">Playlist</string>
+    <string name="nav_misc">Misc</string>
 </resources>

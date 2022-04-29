@@ -1,0 +1,173 @@
+[
+  {
+    "name": "IMA sample ad tags",
+    "samples": [
+      {
+        "name": "Playlist with three ad tags",
+        "playlist": [
+          {
+            "uri": "https://storage.googleapis.com/exoplayer-test-media-1/mp4/android-screens-10s.mp4",
+            "ad_tag_uri": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator="
+          },
+          {
+            "uri": "https://storage.googleapis.com/exoplayer-test-media-1/mp4/android-screens-25s.mp4",
+            "ad_tag_uri": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator="
+          },
+          {
+            "uri": "https://storage.googleapis.com/exoplayer-test-media-1/mp4/frame-counter-one-hour.mp4",
+            "ad_tag_uri": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostlongpod&cmsid=496&vid=short_tencue&correlator="
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "IMA DAI Playlist streams",
+    "samples": [
+      {
+        "name": "Playlist: No ads - HLS VOD: Demo (skippable pre/post) - No ads",
+        "playlist": [
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4"
+          },
+          {
+            "uri": "ssai://dai.google.com/?contentSourceId=2483977&videoId=ima-vod-skippable-test&format=2&adsId=1"
+          },
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4"
+          }
+        ]
+      },
+      {
+        "name": "Playlist: No ads - HLS VOD: Tears of steel (pre/mid/mid/mid/post) - No ads",
+        "playlist": [
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4"
+          },
+          {
+            "uri": "ssai://dai.google.com/?contentSourceId=2528370&videoId=tears-of-steel&format=2&adsId=1"
+          },
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4"
+          }
+        ]
+      },
+      {
+        "name": "Playlist: No ads - HLS Live: Big Buck Bunny (mid) - No ads",
+        "playlist": [
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4"
+          },
+          {
+            "uri": "ssai://dai.google.com/?assetKey=sN_IYUG8STe1ZzhIIE_ksA&format=2&adsId=3"
+          },
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4"
+          }
+        ]
+      },
+      {
+        "name": "Playlist: No ads - DASH VOD: Tears of Steel (11 periods, pre/mid/post) - No ads",
+        "playlist": [
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4"
+          },
+          {
+            "uri": "ssai://dai.google.com/?contentSourceId=2559737&videoId=tos-dash&format=0&adsId=1"
+          },
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4"
+          }
+        ]
+      },
+      {
+        "name": "Playlist: Client-side Ads - DASH VOD: Tears of Steel (11 periods, pre/mid/post) - No ads",
+        "playlist": [
+          {
+            "uri": "https://storage.googleapis.com/exoplayer-test-media-1/mkv/android-screens-lavf-56.36.100-aac-avc-main-1280x720.mkv",
+            "ad_tag_uri": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator="
+          },
+          {
+            "uri": "ssai://dai.google.com/?contentSourceId=2559737&videoId=tos-dash&format=0&adsId=1"
+          },
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Playlists",
+    "samples": [
+      {
+        "name": "Cats -> Dogs",
+        "playlist": [
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4"
+          },
+          {
+            "uri": "https://storage.googleapis.com/exoplayer-test-media-1/mkv/android-screens-lavf-56.36.100-aac-avc-main-1280x720.mkv"
+          }
+        ]
+      },
+      {
+        "name": "Audio -> Video -> Audio",
+        "playlist": [
+          {
+            "uri": "https://storage.googleapis.com/exoplayer-test-media-1/gen-3/screens/dash-vod-single-segment/audio-141.mp4"
+          },
+          {
+            "uri": "https://storage.googleapis.com/exoplayer-test-media-1/mkv/android-screens-lavf-56.36.100-aac-avc-main-1280x720.mkv"
+          },
+          {
+            "uri": "https://storage.googleapis.com/exoplayer-test-media-1/gen-3/screens/dash-vod-single-segment/audio-141.mp4"
+          }
+        ]
+      },
+      {
+        "name": "Clear -> Enc -> Clear -> Enc -> Enc",
+        "playlist": [
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4"
+          },
+          {
+            "uri": "https://storage.googleapis.com/wvmedia/cenc/h264/tears/tears_sd.mpd",
+            "drm_scheme": "widevine",
+            "drm_license_uri": "https://proxy.uat.widevine.com/proxy?provider=widevine_test"
+          },
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4"
+          },
+          {
+            "uri": "https://storage.googleapis.com/wvmedia/cenc/h264/tears/tears_sd.mpd",
+            "drm_scheme": "widevine",
+            "drm_license_uri": "https://proxy.uat.widevine.com/proxy?provider=widevine_test"
+          },
+          {
+            "uri": "https://storage.googleapis.com/wvmedia/cenc/h264/tears/tears_sd.mpd",
+            "drm_scheme": "widevine",
+            "drm_license_uri": "https://proxy.uat.widevine.com/proxy?provider=widevine_test"
+          }
+        ]
+      },
+      {
+        "name": "Manual ad insertion",
+        "playlist": [
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4",
+            "clip_end_position_ms": 10000
+          },
+          {
+            "uri": "https://storage.googleapis.com/exoplayer-test-media-1/mp4/frame-counter-one-hour.mp4",
+            "clip_end_position_ms": 5000
+          },
+          {
+            "uri": "https://html5demos.com/assets/dizzy.mp4",
+            "clip_start_position_ms": 10000
+          }
+        ]
+      }
+    ]
+  }
+]

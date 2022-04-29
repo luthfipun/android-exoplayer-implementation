@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dash_hls"
+        android:title="@string/nav_dash_hls"
+        android:icon="@drawable/ic_baseline_ondemand_video_24" />
+    <item
+        android:id="@+id/nav_ads"
+        android:title="@string/nav_with_ads"
+        android:icon="@drawable/ic_baseline_ondemand_video_24" />
+    <item
+        android:id="@+id/nav_playlists"
+        android:title="@string/nav_playlist"
+        android:icon="@drawable/ic_baseline_ondemand_video_24" />
+    <item
+        android:id="@+id/nav_misc"
+        android:title="@string/nav_misc"
+        android:icon="@drawable/ic_baseline_ondemand_video_24" />
+</menu>
