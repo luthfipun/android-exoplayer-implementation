@@ -1,10 +1,14 @@
-package com.github.luthfipun.mediaplayer
+package com.github.luthfipun.mediaplayer.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.github.luthfipun.mediaplayer.R
 import com.github.luthfipun.mediaplayer.databinding.ActivityMainBinding
+import com.github.luthfipun.mediaplayer.domain.util.VideoType
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -14,13 +18,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // set default navigation view
-        binding.bottomView.selectedItemId = R.id.nav_dash_hls
-        setActionBarTitle(getString(R.string.nav_dash_hls))
-
         // setup bottom navigation
         setupBottomNavSelected()
         setupBottomNavReSelected()
+
+        // set default navigation view
+        binding.bottomView.selectedItemId = R.id.nav_dash_hls
     }
 
     private fun setupBottomNavSelected(){
@@ -28,15 +31,19 @@ class MainActivity : AppCompatActivity() {
             setActionBarTitle(menuItem.title.toString())
             return@setOnItemSelectedListener when(menuItem.itemId){
                 R.id.nav_dash_hls -> {
+                    setFragment(MainFragment.sourceType(VideoType.DashHls))
                     true
                 }
                 R.id.nav_ads -> {
+                    setFragment(MainFragment.sourceType(VideoType.WithAds))
                     true
                 }
                 R.id.nav_playlists -> {
+                    setFragment(MainFragment.sourceType(VideoType.Playlist))
                     true
                 }
                 R.id.nav_misc -> {
+                    setFragment(MainFragment.sourceType(VideoType.Misc))
                     true
                 }
                 else -> false
@@ -48,18 +55,10 @@ class MainActivity : AppCompatActivity() {
         binding.bottomView.setOnItemReselectedListener { menuItem ->
             setActionBarTitle(menuItem.title.toString())
             when(menuItem.itemId){
-                R.id.nav_dash_hls -> {
-
-                }
-                R.id.nav_ads -> {
-
-                }
-                R.id.nav_playlists -> {
-
-                }
-                R.id.nav_misc -> {
-
-                }
+                R.id.nav_dash_hls -> setFragment(MainFragment.sourceType(VideoType.DashHls))
+                R.id.nav_ads -> setFragment(MainFragment.sourceType(VideoType.WithAds))
+                R.id.nav_playlists -> setFragment(MainFragment.sourceType(VideoType.Playlist))
+                R.id.nav_misc -> setFragment(MainFragment.sourceType(VideoType.Misc))
             }
         }
     }

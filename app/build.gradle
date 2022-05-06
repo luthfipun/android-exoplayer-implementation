@@ -58,4 +58,33 @@ dependencies {
 
     def jsonLoader = '1.0.3'
     implementation "com.github.zainfikrih:jsonloader-library:$jsonLoader"
+
+    def gson = '2.9.0'
+    implementation "com.google.code.gson:gson:$gson"
+
+    def fragment_ktx = "1.4.1"
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx"
+
+    def liveData = '2.4.1'
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$liveData"
+
+    // Test
+    def hiltTest = '2.38.1'
+    // For Robolectric tests.
+    testImplementation "com.google.dagger:hilt-android-testing:$hiltTest"
+    // ...with Kotlin.
+    kaptTest "com.google.dagger:hilt-android-compiler:$hiltTest"
+    // For instrumented tests.
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hiltTest"
+    // ...with Kotlin.
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hiltTest"
+
+    def robolectric = '4.4'
+    //Unit test
+    testImplementation "org.robolectric:robolectric:$robolectric"
+    //UI test
+    androidTestImplementation "org.robolectric:robolectric:$robolectric"
+
+    testImplementation 'com.jraska.livedata:testing-ktx:1.2.0'
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
 }
