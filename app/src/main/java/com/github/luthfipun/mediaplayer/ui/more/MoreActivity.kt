@@ -11,6 +11,7 @@ import com.github.luthfipun.mediaplayer.R
 import com.github.luthfipun.mediaplayer.databinding.ActivityMoreBinding
 import com.github.luthfipun.mediaplayer.domain.model.*
 import com.github.luthfipun.mediaplayer.ui.adapter.GlobalAdapter
+import com.github.luthfipun.mediaplayer.ui.player.PlayerActivity
 
 class MoreActivity : AppCompatActivity(), GlobalAdapter.GlobalAdapterListener {
 
@@ -32,7 +33,6 @@ class MoreActivity : AppCompatActivity(), GlobalAdapter.GlobalAdapterListener {
     }
 
     private val globalAdapter = GlobalAdapter()
-
     private lateinit var binding: ActivityMoreBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -90,10 +90,10 @@ class MoreActivity : AppCompatActivity(), GlobalAdapter.GlobalAdapterListener {
     override fun videoData(video: Video) {}
 
     override fun videoItemData(videoItem: VideoItem) {
-        // TODO: Player intent
+        startActivity(PlayerActivity.createIntent(this, videoItem))
     }
 
     override fun playlistItemData(playlistItem: PlaylistItem) {
-        // TODO: Player intent
+        startActivity(PlayerActivity.createIntent(this, playlistItem))
     }
 }

@@ -17,7 +17,7 @@ data class VideoItem(
     @SerializedName("ad_tag_uri")
     var adTagUri: String? = null,
     @SerializedName("clip_end_position_ms")
-    var clipEndPositionMs: Int? = null,
+    var clipEndPositionMs: Long? = null,
     @SerializedName("clip_start_position_ms")
-    var clipStartPositionMs: Int? = null
+    var clipStartPositionMs: Long? = null
 ): Serializable
